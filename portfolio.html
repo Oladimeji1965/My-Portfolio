@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full Stack Developer</p>
+            <h1>Hi, i'm <span>Adeoti</span><br>Godwin Adekoya from Nigeria</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/Hydra/hero.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tittle">About Me</h1>
+                <p>My name is Godwin Adekoya, I'm a Full Stack Developer, you surely can trust me with your website development.</p>
+            
+
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Full Stack</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2026- current</span><br>Cipher Tech Hub Institute</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2026- current</span><br>Cipher Tech Hub Institutes</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Apps</li>
+                    </ul>
+               </div>
+            </div>
+        </div>         
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+       for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+       }
+        for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active-tab");
+        } 
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body> 
+</html>
